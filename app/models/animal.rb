@@ -4,4 +4,8 @@ class Animal < ApplicationRecord
   has_many :customers, -> { distinct }, through: :bookings
   has_one_attached :photo
 
+  validates :name, presence: true
+  validates :species, presence: true
+  validates :daily_price, presence: true
+  validates :description, presence: true
 end
