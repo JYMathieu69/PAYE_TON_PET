@@ -1,1 +1,21 @@
 // Specific CSS for your home-page
+.banner {
+  background-image: url("banimg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 80vh;
+}
+
+.banner h3 {
+  font-size: 50px;
+  margin-bottom: 40px;
+  background-color: rgba(248, 245, 241, 0.6);
+}
+
+.form {
+  margin: 0 auto;
+  width: 700px;
+}
