@@ -15,12 +15,12 @@ paris = User.new(last_name: "Hilton", first_name: "Paris", address: "New York Ci
 
 jeanjacques = User.new(last_name: "Goldman", first_name: "Jean-Jacques", address: "Paris", telephone: "0601020304", mail: "jjgoldman@ilovesong.fr")
 
-seraphin = Animal.new(name: "Seraphin", species: "Pigeon", sexe: "Masculin", description: "Demandez lui ce que vous voulez, Seraphin acceptera. Faites vous plaisir, pigeonnez le...", chip: false, worms: false, vaccined: false, accessories: "Des cheveux coincés dans les pattes.", owner: chuck)
+seraphin = Animal.new(name: "Seraphin", species: "Pigeon", gender: "Masculin", description: "Demandez lui ce que vous voulez, Seraphin acceptera. Faites vous plaisir, pigeonnez le...", chip: false, worm: false, vaccined: false, accessories: "Des cheveux coincés dans les pattes.", owner: chuck, daily_price: 1)
 
-luna = Animal.new(name: "Luna", species: "Chat", sexe: "Feminin", description: "Le poil doux comme la soie", chip: true, worms: true, vaccined: true, accessories: "Une ceinture Gucci", owner: jeanjacques)
+luna = Animal.new(name: "Luna", species: "Chat", gender: "Feminin", description: "Le poil doux comme la soie", chip: true, worm: true, vaccined: true, accessories: "Une ceinture Gucci", owner: jeanjacques, daily_price: 50)
 
-guillaume = Animal.new(name: "Guillaume", species: "Suricat", sexe: "Masculin", descritpion: "Le bon copain de soirée! Une grande capacité à déployer un tas de conneries :)", chip: false, worms: false, vaccined: false, accessories: "Bandana de combat", owner: paris)
+guillaume = Animal.new(name: "Guillaume", species: "Suricat", gender: "Masculin", descritpion: "Le bon copain de soirée! Une grande capacité à déployer un tas de conneries :)", chip: false, worm: false, vaccined: false, accessories: "Bandana de combat", owner: paris, daily_price: 250)
 
-sophie = Animal.new(name: "Sophie", species: "Girafe", sexe: "Feminin", descritpion: "Te poussera à garder l'esprit ouvert et voir toujours plus loin.", chip: true, worms: false, vaccined: false, accessories: "Paire de lunette de soleil & un guettoblaster", owner: jeanjacques)
+sophie = Animal.new(name: "Sophie", species: "Girafe", gender: "Feminin", descritpion: "Vois BIG dans la ThugLife de Sophie", chip: true, worm: false, vaccined: false, accessories: "Paire de lunette de soleil & un guettoblaster", owner: jeanjacques, daily_price: 125)
 
-brandon = Animal.new(name: "Brandon", species: "Etalon", race: "Pur sang arabe" sexe: "Masculin", descritpion: "Infatigable, toujours bien monté, Brandon a de beaux muscles.", chip: true, worms: true, vaccined: true, accessories: "Une gourmette avec son nom", owner: chuck)
+brandon = Animal.new(name: "Brandon", species: "Etalon", race: "Pur sang arabe" gender: "Masculin", descritpion: "Infatigable, toujours bien monté, Brandon a de beaux muscles.", chip: true, worm: true, vaccined: true, accessories: "Une gourmette avec son nom", owner: chuck, daily_price: 200)
