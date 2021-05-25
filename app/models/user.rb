@@ -15,4 +15,5 @@ class User < ApplicationRecord
   validates :daily_price, presence: true
   validates :description, presence: true
 
+  has_one_attached :photos
 end

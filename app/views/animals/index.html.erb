@@ -1,5 +1,9 @@
 <h1>Animals#index</h1>
 <p>Find me in app/views/animals/index.html.erb</p>
 <% @animals.each do |animal| %>
+<%= cl_image_tag animal.photo.key, height: 300, width: 400, crop: :fill %>
 <%= animal.name %>
+<%= animal.race %>
+<%= animal.gender %>
+<%= animal.daily_price %>
 <%end%>
