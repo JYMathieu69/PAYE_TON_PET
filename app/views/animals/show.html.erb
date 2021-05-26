@@ -1,22 +1,24 @@
 < class="animal-show"><h1>Animals#show</h1>
   <%= cl_image_tag animal.photo.key, height: 300, width: 400, crop: :fill %>
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_tag animal.photo.key, height: 300, crop: :fill %>')">
-  <div class="medical">
+  <div class="card-animal-left">
     <strong>chip:</strong><%= animal.chip %>
     <strong>worms:</strong><%= animal.worms %>
     <strong>vaccined:</strong><%= animal.vaccined %>
   </div>
   <div class="card-animal-right"></div>
-    <strong>name:</strong><%= animal.name %>
-    <strong>species:</strong><%= animal.species %>
-    <strong>race:</strong><%= animal.race %>
-    <strong>gender:</strong><%= animal.gender %>
+    <div>
+      <strong>name:</strong><%= animal.name %>
+      <strong>species:</strong><%= animal.species %>
+      <strong>race:</strong><%= animal.race %>
+      <strong>gender:</strong><%= animal.gender %>
+      <strong>accessories:</strong><%= animal.accessories %>
+    </div>
   </div>
-  <div class="card-animal-right">
+  <div class="card-animal-description">
     <strong>description:</strong><%= animal.description %>
-    <strong>accessories:</strong><%= animal.accessories %>
-    <strong>daily_price:</strong><%= animal.daily_price %>
-    <strong>owner_id:</strong><%= animal.owner_id %>
+    <!-- <strong>owner_id:</strong><%= animal.owner_id %>-->
   </div>
+    <strong>daily_price:</strong><%= animal.daily_price %>
 
 </div>
