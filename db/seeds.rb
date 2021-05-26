@@ -22,9 +22,17 @@ seraphin_file = URI.open('https://www.pausecafein.fr/images/cafein/2016/06/pigeo
 seraphin.photo.attach(io: seraphin_file, filename: 'pigeon.jpg', content_type: 'image/jpg')
 
 luna = Animal.create!(name: "Luna", species: "Chat", gender: "Feminin", description: "Le poil doux comme la soie", chip: true, worm: true, vaccined: true, accessories: "Une ceinture Gucci", owner: jeanjacques, daily_price: 50)
+luna_file = URI.open('https://www.santevet.com/upload/admin/images/article/chat_2_2/chat__plus_bel_animal_du_monde.jpg')
+luna.photo.attach(io: luna_file, filename: 'chat.jpg', content_type: 'image/jpg')
 
 guillaume = Animal.create!(name: "Guillaume", species: "Suricat", gender: "Masculin", description: "Le bon copain de soirée! Une grande capacité à déployer un tas de conneries :)", chip: false, worm: false, vaccined: false, accessories: "Bandana de combat", owner: paris, daily_price: 250)
+guillaume_file = URI.open('https://img.pixers.pics/pho_wat(s3:700/FO/45/28/25/76/700_FO45282576_547d25a7f247d74c8766a441d3f2dc30.jpg,525,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,305,650,jpg)/papiers-peints-suricate.jpg.jpg')
+guillaume.photo.attach(io: guillaume_file, filename: 'suricat.jpg', content_type: 'image/jpg')
 
 sophie = Animal.create!(name: "Sophie", species: "Girafe", gender: "Feminin", description: "Vois BIG dans la ThugLife de Sophie", chip: true, worm: false, vaccined: false, accessories: "Paire de lunette de soleil & un guettoblaster", owner: jeanjacques, daily_price: 125)
+sophie_file = URI.open('https://cdn131.picsart.com/260931981024202.jpg?to=crop&type=webp&r=310x310&q=75')
+sophie.photo.attach(io: sophie_file, filename: 'girafe.jpg', content_type: 'image/jpg')
 
 brandon = Animal.create!(name: "Brandon", species: "Etalon", race: "Pur sang arabe", gender: "Masculin", description: "Infatigable, toujours bien monté, Brandon a de beaux muscles.", chip: true, worm: true, vaccined: true, accessories: "Une gourmette avec son nom", owner: chuck, daily_price: 200)
+brandon_file = URI.open('https://i.skyrock.net/9546/79349546/pics/3016979749_1_3_Ilo43A01.jpg')
+brandon.photo.attach(io: brandon_file, filename: 'cheval.jpg', content_type: 'image/jpg')
