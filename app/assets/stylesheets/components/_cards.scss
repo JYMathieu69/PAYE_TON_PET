@@ -1,36 +1,43 @@
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr ;
-  gap: 1rem;
-  flex-grow: 1;
+.animal-show {
+  display: flex;
+  background-color: #fff;
 }
 
 .card-animal-left {
-  background-size: cover;
-  background-position: center;
-  height: 150px;
-  border-radius: 1px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  width: 50%;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  font-size: 22px;
-  color: white;
-  font-weight: bolder;
-  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  flex-direction: column;
+
+}
+.card-animal-left img {
+  margin-left: 0;
+  width: 300;
+  height: fit-content;
 }
 
 .card-animal-right {
-  background-size: cover;
-  background-position: center;
-  height: 150px;
-  border-radius: 1px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  font-size: 22px;
-  color: white;
-  font-weight: bolder;
-  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  width: 50%;
+  background-image: linear-gradient(rgba(226, 41, 41, 0.568), rgba(0, 0, 0, 0.048));
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 1fr 0.5fr;
+}
+.card-animal-name {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+.card-animal-srg {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
+.card-accesoiries {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+  grid-column: 2;
+  grid-row: 2;
+}
+.card-animal-description {
+  grid-column: 1 / span 2;
+  grid-row: 3;
 }
