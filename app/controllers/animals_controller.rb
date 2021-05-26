@@ -1,5 +1,7 @@
 class AnimalsController < ApplicationController
   # before_action :xxxx
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     @animals = Animal.all
   end

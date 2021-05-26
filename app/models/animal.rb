@@ -3,4 +3,6 @@ class Animal < ApplicationRecord
   has_many :bookings, dependent: :destroy
   has_many :customers, -> { distinct }, through: :bookings
 
+  validates :name, presence: true
+
 end

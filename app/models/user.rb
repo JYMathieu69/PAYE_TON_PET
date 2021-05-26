@@ -10,9 +10,5 @@ class User < ApplicationRecord
 
   validates :last_name, presence: true
   validates :first_name, presence: true
-  validates :species, presence: true
-  validates :race, presence: true
-  validates :daily_price, presence: true
-  validates :description, presence: true
 
 end
