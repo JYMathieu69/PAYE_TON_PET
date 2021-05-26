@@ -1,2 +1,69 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="navbar navbar-light bg-light w-100">
+    <%= image_tag("logopet.png", class: "logo") %>
+  <div class="dropdown">
+    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Menu
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Sign In</a>
+      <a class="dropdown-item" href="#">Show</a>
+      <a class="dropdown-item" href="#">About</a>
+    </div>
+  </div>
+</div>
+<div class="banner">
+  <div class="container">
+    <h3>Découvrez et louez nos animaux</h3>
+    <div class="formulaire">
+      <form class=form-group>
+          <select name="" id="options" placeholder="Species">
+            <option value="" id="species">Species</option>
+            <option value="0">Horse</option>
+            <option value="1">Dog</option>
+            <option value="1">Pigeon</option>
+          </select>
+          <input type="text" placeholder="Location" id="location">
+          <input type="date" id="dates" name="trip-start"
+          value="2018-07-22"
+          min="2021-01-01" max="2099-12-31">
+          <input type="submit" id="submit">
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  <section
+    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>PET SA MERE L'APP</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+</footer>
+<!-- Footer -->
