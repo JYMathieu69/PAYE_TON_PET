@@ -1,0 +1,8 @@
+<h3>Booking Summary</h3>
+
+<h4><%= @animal.name %></h4>
+
+<p><%= cl_image_tag @animal.photo.key, height: 300, width: 400, crop: :fill %></p>
+
+
+<%= render "form", booking: @booking %>

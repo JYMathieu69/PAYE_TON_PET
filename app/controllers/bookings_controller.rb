@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_animal, only: [:create]
+  before_action :set_animal, only: [:new, :create]
 
   def my_bookings
     @bookings = current_user.customer_bookings
