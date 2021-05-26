@@ -1,19 +1,35 @@
-<div class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="navbar navbar-light bg-light w-100">
     <%= image_tag("logopet.png", class: "logo") %>
-    <div class="btn btn-secondary">
-      <div class="collapse navbar-collapse" href="#">
-        Menu
-      </div>
+  <div class="dropdown">
+    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Menu
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Sign In</a>
+      <a class="dropdown-item" href="#">Show</a>
+      <a class="dropdown-item" href="#">About</a>
     </div>
-
+  </div>
 </div>
 <div class="banner">
   <div class="container">
-    <h3>Découvrez nos animaux</h3>
-    <form class=form>
-        <input class="form-control me-2 mt-3" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-secondary mt-4" type="submit">Search</button>
+    <h3>Découvrez et louez nos animaux</h3>
+    <div class="formulaire">
+      <form class=form-group>
+          <select name="" id="options" placeholder="Species">
+            <option value="" id="species">Species</option>
+            <option value="0">Horse</option>
+            <option value="1">Dog</option>
+            <option value="1">Pigeon</option>
+          </select>
+          <input type="text" placeholder="Location" id="location">
+          <input type="date" id="dates" name="trip-start"
+          value="2018-07-22"
+          min="2021-01-01" max="2099-12-31">
+          <input type="submit" id="submit">
       </form>
+    </div>
+
   </div>
 </div>
 
@@ -24,7 +40,7 @@
     class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
     <!-- Left -->
     <div class="me-5 d-none d-lg-block">
-      <span>Get connected with us on social networks:</span>
+      <span>PET SA MERE L'APP</span>
     </div>
     <!-- Left -->
 

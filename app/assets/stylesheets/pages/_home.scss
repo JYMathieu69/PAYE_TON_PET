@@ -15,7 +15,35 @@
   background-color: rgba(248, 245, 241, 0.6);
 }
 
-.form {
-  margin: 0 auto;
-  width: 700px;
+.formulaire {
+  display: flex;
+  justify-content: center;
+}
+
+.form-group {
+  margin: 0px;
+  display: flex;
+}
+
+#options {
+  border-radius: 20px 0px 0px 20px;
+  padding: 15px;
+  border: none;
+}
+
+#location {
+  border: none;
+  padding-left: 10px;
+}
+
+#dates {
+  border: none;
+  padding-right: 10px;
+}
+
+
+#submit {
+  border-radius: 0px 20px 20px 0px;
+  border: none;
+  background-color: #a7bbc7;
 }
