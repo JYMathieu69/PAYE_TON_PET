@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
@@ -11,4 +10,5 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :first_name, presence: true
 
+  has_one_attached :photos
 end
