@@ -1,12 +1,23 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.container1 {
+  margin: 0px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+#dropdownMenuButton {
+  background-color: #a7bbc7;
+  margin-right: 10px;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.logo {
+  height: 70px;
+  margin-left: 10px;
+}
+
+.avatar {
+  margin-left: 10px;
+  border-radius: 50%;
+}
+
+.button {
+  right: 50px;
+  align-items: center;
 }
