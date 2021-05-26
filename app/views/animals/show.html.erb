@@ -1,32 +1,46 @@
 <div class="animal-show">
+    <div class = "price"><%= @animal.daily_price %>€<br>/day</div>
 
   <div class="card-animal-left">
     <%= cl_image_tag @animal.photo.key, height: 300, width: 400, crop: :fill %>
-    <!-- <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @animal.photo.key, height: 300, crop: :fill %>')"></div>-->
-    <div>
-      <strong>chip:</strong><%= @animal.chip %>
-      <strong>worm:</strong><%= @animal.worm %>
-      <strong>vaccined:</strong><%= @animal.vaccined %>
+    <div class="animal-container">
+      <div><% if @animal.chip %>
+        <i class="fas fa-check-square"></i>
+        <% else %>
+        <i class="fas fa-square"></i>
+        <% end %> RFID Tag</div>
+      <div><% if @animal.worm %>
+        <i class="fas fa-check-square"></i>
+        <% else %>
+        <i class="fas fa-square"></i>
+        <% end %> Dewormed</div>
+      <div><% if @animal.vaccined %>
+        <i class="fas fa-check-square"></i>
+        <% else %>
+        <i class="fas fa-square"></i>
+        <% end %> Vaccined</div>
     </div>
   </div>
   <div class="card-animal-right">
       <div class="card-animal-name">
-        <h5>Name:<%= @animal.name %></h5>
+        <h1><strong><%= @animal.name %></strong></h1>
       </div>
       <div class="card-animal-srg">
-        <div><h5>Species:</h5><%= @animal.species %></div>
-        <div><h5>Race:</h5><%= @animal.race %></div>
-        <div><h5>Gender:</h5><%= @animal.gender %></div>
+        <p>Species: <strong><%= @animal.species %></strong></p>
+        <p>Race: <strong><%= @animal.race %></strong></p>
+        <p>Gender: <strong><%= @animal.gender %></strong></p>
       </div>
       <div class="card-accesoiries">
-        <h4>accessories:</h4>
+        <h3>Accessories:</h3>
         <p><%= @animal.accessories %></p>
       </div>
       <div class="card-animal-description">
-        <h4>description:</h4>
+        <h3>Description:</h3>
         <p><%= @animal.description %></p>
-        <strong>owner:</strong><%= @animal.owner.first_name %>
+        <p>Owner: <strong><%= @animal.owner.first_name %></strong></p>
+        <div class="container">
+          <%= link_to 'BooooK me !!!!', animals_index_path, class: 'btn btn-primary btn-lg justify-center w-100' %>
+        </div>
       </div>
   </div>
 </div>
-    <strong>daily_price:</strong><%= @animal.daily_price %>
