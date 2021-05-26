@@ -1,0 +1,11 @@
+<h1>My Bookings</h1>
+
+<ul>
+  <% if @bookings.empty? %>
+    <p>Vamos to Booking together !!</p>
+  <% else %>
+    <% @bookings.each do |booking| %>
+      <li> <%= link_to booking.date, animal_path(booking.animal) %> </li>
+    <% end %>
+  <% end %>
+</ul>
