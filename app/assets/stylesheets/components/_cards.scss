@@ -1,0 +1,123 @@
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    padding-left: 20px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-variant: small-caps;
+    font-weight: bolder;
+    padding-left: 4px;
+}
+
+h4 {
+    font-size: 1.1rem;
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+.animal-show {
+  position:relative;
+  display: flex;
+  background: #deebff;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.144));
+  width: 700px;
+  margin: 50px auto;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.336);
+}
+
+.price {
+  position: absolute;
+  display: flex;
+  top: -20px;
+  right: -20px;
+  color:brown;
+  font-size: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 0.9em;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  border: darkcyan 2px solid;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  transform: rotate(10deg);
+  background-image: linear-gradient( rgba(255, 219, 100, 0.815), rgba(255, 228, 107, 0.89), rgba(255, 208, 0, 0.89));
+}
+
+.animal-container {
+  padding-top: 40px;
+  width: 150px;
+  text-align: left;
+  margin: 0 auto;
+  font-size: 0.8rem;
+  color: rgb(85, 83, 185);
+}
+
+.card-animal-left {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card-animal-left img {
+  width: 300px;
+  height: fit-content;
+  border-radius: 5px;
+  transform: rotate(-3deg);
+  margin-top: 2px;
+  margin-left: -10px;
+  box-shadow: 2PX 5px 10px rgba(0, 0, 0, 0.39);
+}
+
+.card-animal-right {
+  padding: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 0.7fr 0.5fr;
+}
+.card-animal-name {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+.card-animal-srg {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
+.card-accesoiries {
+  padding: 5px;
+  grid-column: 2;
+  grid-row: 2;
+  background: rgb(55, 46, 87);
+  background-image: linear-gradient(120deg,rgba(255, 255, 255, 0.295), rgba(255, 255, 255, 0));
+  max-height: 100px;
+  border-radius: 3px;
+  color:honeydew;
+}
+
+.card-animal-description {
+  padding: 5px;
+  grid-column: 1 / span 2;
+  grid-row: 3;
+  background: #dfdeff;
+  background-image: linear-gradient(120deg,rgba(255, 255, 255, 0.295), rgba(255, 255, 255, 0));
+  border-radius: 5px;
+  box-shadow: -2px -2px 10px rgba(255, 255, 255, 0.418), 2px 2px 10px rgba(0, 0, 0, 0.233);
+}
+
