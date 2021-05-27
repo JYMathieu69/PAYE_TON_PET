@@ -1,46 +1,63 @@
-<div class="animal-show">
-    <div class = "price"><%= @animal.daily_price %>€<br>/day</div>
 
-  <div class="card-animal-left">
-    <%= cl_image_tag @animal.photo.key, height: 300, width: 400, crop: :fill %>
-    <div class="animal-container">
-      <div><% if @animal.chip %>
-        <i class="fas fa-check-square"></i>
-        <% else %>
-        <i class="fas fa-square"></i>
-        <% end %> RFID Tag</div>
-      <div><% if @animal.worm %>
-        <i class="fas fa-check-square"></i>
-        <% else %>
-        <i class="fas fa-square"></i>
-        <% end %> Dewormed</div>
-      <div><% if @animal.vaccined %>
-        <i class="fas fa-check-square"></i>
-        <% else %>
-        <i class="fas fa-square"></i>
-        <% end %> Vaccined</div>
+<div class="animal-show">
+  <div class="container-margin">
+    <div class="card-animal-left">
+        <%= cl_image_tag @animal.photo.key, height: 300, width: 400, crop: :fill %>
+        <div class="animal-container">
+          <div><% if @animal.chip %>
+            <i class="far fa-check-square"></i>
+          <% else %>
+          <i class="far fa-square"></i>
+          <% end %> RFID Tag</div>
+        <div><% if @animal.worm %>
+          <i class="far fa-check-square"></i>
+          <% else %>
+          <i class="far fa-square"></i>
+          <% end %> Dewormed</div>
+        <div><% if @animal.vaccined %>
+          <i class="far fa-check-square"></i>
+          <% else %>
+          <i class="far fa-square"></i>
+          <% end %> Vaccined</div>
+      </div>
     </div>
   </div>
   <div class="card-animal-right">
       <div class="card-animal-name">
-        <h1><strong><%= @animal.name %></strong></h1>
-      </div>
-      <div class="card-animal-srg">
-        <p>Species: <strong><%= @animal.species %></strong></p>
-        <p>Race: <strong><%= @animal.race %></strong></p>
-        <p>Gender: <strong><%= @animal.gender %></strong></p>
-      </div>
-      <div class="card-accesoiries">
-        <h3>Accessories:</h3>
-        <p><%= @animal.accessories %></p>
-      </div>
-      <div class="card-animal-description">
-        <h3>Description:</h3>
-        <p><%= @animal.description %></p>
-        <p>Owner: <strong><%= @animal.owner.first_name %></strong></p>
-        <div class="container">
-          <%= link_to 'BooooK me !!!!', animals_index_path, class: 'btn btn-primary btn-lg justify-center w-100' %>
+          <h1><strong><%= @animal.name %></strong></h1>
+        <div class="card-animal-srg">
+          <p>Species: <strong><%= @animal.species %></strong></p>
+          <p>Race: <strong><%= @animal.race %></strong></p>
+          <p>Gender: <strong><%= @animal.gender %></strong></p>
         </div>
       </div>
-  </div>
+
+      <div class="row section-bottom">
+        <div class="col">
+          <div class="card-animal-description">
+            <h3>Description:</h3>
+            <p><%= @animal.description %></p>
+            <p>Owner: <strong><%= @animal.owner.first_name %></strong></p>
+            <p>Address: <strong><%= @animal.owner.address %></strong></p>
+          </div>
+        </div>
+        <div class="col d-flex flex-column justify-content-between">
+          <div class="card-accesoiries">
+            <h3>Accessories:</h3>
+            <p><%= @animal.accessories %></p>
+          </div>
+          <div class="prix">
+            <div class="d-flex flex-column bd-highlight text-center">
+              <div class = "p-2 bd-highlight "><%= @animal.daily_price %>€/day</div>
+              <div class="btn-container">
+                <%= link_to 'Book me', my_bookings_path, class: 'btn btn-lg justify-center w-100 bg-white text-black' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="retour">
+  <%= link_to 'Retour', animals_index_path, class: 'btn btn-lg justify-center w-100 text-white' %>
 </div>
