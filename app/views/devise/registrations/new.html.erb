@@ -1,11 +1,12 @@
 
 <div class="content">
-
-  <div class="image-welcome">
-    <%= image_tag "welcome.png", alt: "WELCOME", width: 200, class: 'welcome' %>
+  <div class="images_signup">
+      <%= image_tag "welcome.png", alt: "WELCOME", width: 200, class: 'welcome' %>
+      <%= image_tag "image_signup.png", alt: "SIGNUP", width: 200, class: 'signup' %>
   </div>
 
-  <h2> Create your account to discover <strong>our animals</strong> 🐶 </h2>
+  <h2> Tu veux vivre une expérience <strong> UNIQUE 🐶 ?</strong></h2> 
+
 
   <form class="pure-form">
 
@@ -50,7 +51,9 @@
         </div>
             <div class="form-actions">
               <%= f.button :submit, "Sign up", class: 'button' %>
-              <%= render "devise/shared/links" %> 
+              <div>
+                <%= render "devise/shared/links", class: 'signin-link' %>
+              </div>
             </div>
       <% end %>
     </div>

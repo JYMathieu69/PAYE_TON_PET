@@ -1,5 +1,5 @@
-body.devise {
 
+body.devise {
   .content {
     text-align: center;
   }
@@ -7,15 +7,27 @@ body.devise {
   h2 {
     padding-left: 0px;
     margin-bottom: 40px;
-    margin-top: 20px;
+    margin-top: 40px;
     font-size:  24px; 
-    color:  #000; 
     opacity:  .85;
+  }
+
+  h2 strong {
+    color: rgba(255, 32, 110,0.8);
   }
 
   img.welcome {
     margin-bottom: 40px;
     width: 70%;
+    height: auto;
+    position: relative;
+  }
+
+  img.signup {
+    position: absolute;
+    bottom: 288px;
+    right: 33px;
+    margin-top: 20px;
   }
 
   .form-control {
@@ -39,20 +51,19 @@ body.devise {
 
   label {
     width: 30%;
-    color:  #000;
+    color:  #F5F3E8; 
     opacity:  .8;
     font-weight:  400; 
   }
   
-  a {
+  a.signin-link {
     text-decoration: none;
+    margin-top: 10px;
   }
 
   .form-actions {
     position: absolute;
-    bottom: -145px;
-    right: 115px;
-
-  }
-
+    bottom: -264px;
+    right: 92px;
+}
 }
