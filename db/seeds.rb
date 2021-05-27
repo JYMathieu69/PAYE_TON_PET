@@ -36,3 +36,8 @@ sophie.photo.attach(io: sophie_file, filename: 'girafe.jpg', content_type: 'imag
 brandon = Animal.create!(name: "Brandon", species: "Etalon", race: "Pur sang arabe", gender: "Masculin", description: "Infatigable, toujours bien monté, Brandon a de beaux muscles.", chip: true, worm: true, vaccined: true, accessories: "Une gourmette avec son nom", owner: chuck, daily_price: 200)
 brandon_file = URI.open('https://i.skyrock.net/9546/79349546/pics/3016979749_1_3_Ilo43A01.jpg')
 brandon.photo.attach(io: brandon_file, filename: 'cheval.jpg', content_type: 'image/jpg')
+
+
+Booking.create!(date: '02-02-2022', customer: chuck, animal: guillaume)
+Booking.create!(date: '03-03-2023', customer: chuck, animal: sophie)
+Booking.create!(date: '04-04-2024', customer: chuck, animal: luna)

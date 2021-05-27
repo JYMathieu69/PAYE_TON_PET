@@ -8,4 +8,8 @@ class Animal < ApplicationRecord
   validates :species, presence: true
   validates :daily_price, presence: true
   validates :description, presence: true
+
+  def dispo?(date)
+    bookings.where(date: date).none?
+  end
 end

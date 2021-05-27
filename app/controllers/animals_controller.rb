@@ -19,6 +19,15 @@ class AnimalsController < ApplicationController
 
   def index
     @animals = Animal.all
+    if params[:species].present?
+      @animals = @animals.where(species: params[:species])
+    end
+    if params[:location].present?
+      @animals = @animals.joins(:owner).where(users: {address: params[:location]})
+    end
+    if params[:date].present?
+      @animals = @animals..select { |a| a.dispo?(params[:date]) }
+    end
   end
 
   def show
@@ -59,5 +68,9 @@ class AnimalsController < ApplicationController
 
   def animal_params
     params.require(:animal).permit(*KEYS_ANIMAL)
+  end
+
+  def search_params
+    params.require(:bookings).permit(:species, :location, :date)
   end
 end

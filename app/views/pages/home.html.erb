@@ -16,21 +16,13 @@
   <div class="container">
     <h3>Découvrez et louez nos animaux</h3>
     <div class="formulaire">
-      <form class=form-group>
-          <select name="" id="options" placeholder="Species">
-            <option value="" id="species">Species</option>
-            <option value="0">Horse</option>
-            <option value="1">Dog</option>
-            <option value="1">Pigeon</option>
-          </select>
-          <input type="text" placeholder="Location" id="location">
-          <input type="date" id="dates" name="trip-start"
-          value="2018-07-22"
-          min="2021-01-01" max="2099-12-31">
-          <input type="submit" id="submit">
-      </form>
+      <%= form_tag animals_path, method: :get, class: "form-group"  do %>
+        <%= select_tag 'species', options_for_select( @species), include_blank: "Species", id: "options" %>
+        <%= select_tag 'location', options_for_select(@location), include_blank: "Location" %>
+        <%= date_field_tag 'date', nil, class: 'special_input'%>
+        <%= submit_tag "Search", id: "submit" %>
+      <% end %>
     </div>
-
   </div>
 </div>
 
