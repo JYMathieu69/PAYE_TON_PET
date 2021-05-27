@@ -11,26 +11,25 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-<body>
-  <div class="navbar navbar-light bg-light w-100">
-    <%= image_tag("logopet.png", class: "logo") %>
-  <div class="dropdown">
-    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Menu
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="#">Sign In</a>
-      <a class="dropdown-item" href="#">Show</a>
-      <a class="dropdown-item" href="#">About</a>
+  <body class="<%= 'devise' if params[:controller] =~ /devise/ %>">
+    <div class="navbar navbar-light bg-light w-100">
+      <%= image_tag("logopet.png", class: "logo") %>
+      <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Menu
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Sign In</a>
+          <a class="dropdown-item" href="#">Show</a>
+          <a class="dropdown-item" href="#">About</a>
+        </div>
+      </div>
     </div>
-  </div>
-  </div>
+      
     <div class="container">
       <%= yield %>
     </div>
-</body>
-
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </body>
 </html>
