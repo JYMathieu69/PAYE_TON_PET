@@ -1,0 +1,58 @@
+body.devise {
+
+  .content {
+    text-align: center;
+  }
+
+  h2 {
+    padding-left: 0px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    font-size:  24px; 
+    color:  #000; 
+    opacity:  .85;
+  }
+
+  img {
+    margin-bottom: 40px;
+    width: 70%;
+  }
+
+  .form-control {
+    width: 56%;
+  }
+  
+  .form-group {
+    display: flex;
+    position: relative;
+  }
+
+  .form-group .password {
+    margin-bottom: 30px;
+  }
+
+  .form-text {
+    position: absolute;
+    bottom: 9px;
+    right: 98px;
+  }
+
+  label {
+    width: 30%;
+    color:  #000;
+    opacity:  .8;
+    font-weight:  400; 
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  .form-actions {
+    position: absolute;
+    bottom: -145px;
+    right: 115px;
+
+  }
+
+}

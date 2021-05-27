@@ -1,41 +1,60 @@
-<h2>Sign up</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+<div class="content">
 
-  <div class="form-inputs">
-    <%= f.input :last_name,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "last_name" }%>
-    <%= f.input :first_name,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "first_name" }%>
-    <%= f.input :address,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "address" }%>
-    <%= f.input :telephone,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "telephone" }%>
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+  <div class="image-welcome">
+    <%= image_tag "welcome.png", alt: "WELCOME", width: 200 %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
+  <h2> Create your account to discover <strong>our animals</strong> 🐶 </h2>
 
-<%= render "devise/shared/links" %>
+  <form class="pure-form">
+
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="form-inputs">
+          <%= f.input :last_name,
+                      required: true,
+                      autofocus: true,
+                      placeholder: "Your Last Name",
+                      input_html: { autocomplete: "last_name" }%>
+          <%= f.input :first_name,
+                      required: true,
+                      autofocus: true,
+                      placeholder: "Your First Name",
+                      input_html: { autocomplete: "first_name" }%>
+          <%= f.input :address,
+                      required: true,
+                      autofocus: true,
+                      placeholder: "Your Address",
+                      input_html: { autocomplete: "address" }%>
+          <%= f.input :telephone,
+                      required: true,
+                      autofocus: true,
+                      placeholder: "Your Number Phone",
+                      input_html: { autocomplete: "telephone" }%>
+          <%= f.input :email,
+                      required: true,
+                      autofocus: true,
+                      placeholder: "Your email",
+                      input_html: { autocomplete: "email" }%>
+          <%= f.input :password,
+                      required: true,
+                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                      placeholder: "Your Password",
+                      input_html: { autocomplete: "new-password" } %>
+          <%= f.input :password_confirmation,
+                      required: true,
+                      placeholder: "Your Confirmation",
+                      input_html: { autocomplete: "new-password" } %>
+        </div>
+            <div class="form-actions">
+              <%= f.button :submit, "Sign up", class: 'button' %>
+              <%= render "devise/shared/links" %> 
+            </div>
+      <% end %>
+    </div>
+  </form>
+</div>
+
+

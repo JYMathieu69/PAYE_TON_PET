@@ -11,13 +11,13 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-  <body>
+  <body class="<%= 'devise' if params[:controller] =~ /devise/ %>">
+    
+    
     <div class="container">
       <%= yield %>
     </div>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
   </body>
-
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
 </html>
