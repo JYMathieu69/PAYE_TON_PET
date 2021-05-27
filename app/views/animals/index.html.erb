@@ -1,20 +1,29 @@
 <div class="banniere">
-  <div class="container">
-    <h1>Nos animaux</h1>
-    <h3>Choisissez votre animal</h3>
+  <div class="container container-index-animals">
+    <h1>Welcome to The Beastiaire</h1>
+    <h3>Ici, il n'y a qu'un embarras... celui du choix.</h3>
+    <hr class= "yellow">
   </div>
 </div>
-
 <div class="container">
-  <div class="row">
-    <% @animals.each do |animal| %>
-      <tr>
-        <%= cl_image_tag animal.photo.key, height: 300, width: 400, crop: :fill %>
-        <td><%= animal.name %></td>
-        <td><%= animal.gender %></td>
-        <td><%= animal.race %></td>
-        <td><%= animal.daily_price %></td>
-      </tr>
+  <div class= "animal_cards">
+    <% @animals.each_with_index do |animal, i| %>
+      <div class= "animal_card <%= "shd-green" if ((i + 1) / 2) % 2  == 0 %>">
+        <div class="animal_picture"><%= link_to animal_path(animal) do %>
+            <%= cl_image_tag animal.photo.key %>
+          <% end -%>
+        </div>
+        <div class="animal_infos">
+          <p><%= link_to animal.name, animal_path(animal), class: 'animal_name' %></p>
+          <p class= "animal_gender" ><%= animal.gender %></p>
+          <p class= "animal_race" ><%= animal.race %></p>
+          <p class= "animal_price" ><%= "#{animal.daily_price}€" %></p>
+        </div>
+      </div>
     <% end %>
   </div>
+  <hr class= "yellow">
+  <footer class="footer_index">
+    <h4><%= link_to "Back home", root_path, class: 'elem_footer' %></h4>
+  </footer>
 </div>
