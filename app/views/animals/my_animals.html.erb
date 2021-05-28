@@ -1,7 +1,31 @@
-<h1>My Animals</h1>
-
-<ul>
-<% @animals.each do |animal| %>
-  <li><%= link_to animal.name, animal_path(animal) %></li>
-<% end %>
-</ul>
+<div class="banniere">
+  <div class="container container-index-animals">
+    <h1>Welcome to My Money-Makers list</h1>
+    <h3>Here is the list of all my annimals.</h3>
+    <hr class= "yellow">
+  </div>
+</div>
+<div class="container">
+  <div class= "animal_cards">
+    <% @animals.each_with_index do |animal, i| %>
+      <div class= "animal_card <%= "shd-green" if ((i + 1) / 2) % 2  == 0 %>">
+        <div class="animal_picture"><%= link_to animal_path(animal) do %>
+          <% if animal.photo.attached? %>
+            <%= cl_image_tag animal.photo.key %>
+          <% end %>
+          <% end -%>
+        </div>
+        <div class="animal_infos">
+          <p><%= link_to animal.name, animal_path(animal), class: 'animal_name' %></p>
+          <p class= "animal_gender" ><%= animal.gender %></p>
+          <p class= "animal_race" ><%= animal.race %></p>
+          <p class= "animal_price" ><%= "#{animal.daily_price}€" %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <hr class= "yellow">
+  <footer class="footer_index">
+    <h4><%= link_to "Back home", root_path, class: 'elem_footer' %></h4>
+  </footer>
+</div>
