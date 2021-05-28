@@ -26,7 +26,7 @@ class AnimalsController < ApplicationController
       @animals = @animals.joins(:owner).where(users: {address: params[:location]})
     end
     if params[:date].present?
-      @animals = @animals..select { |a| a.dispo?(params[:date]) }
+      @animals = @animals.select { |a| a.dispo?(params[:date]) }
     end
   end
 
