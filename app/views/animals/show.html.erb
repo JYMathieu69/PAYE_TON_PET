@@ -2,7 +2,9 @@
 <div class="animal-show">
   <div class="container-margin">
     <div class="card-animal-left">
-        <%= cl_image_tag @animal.photo.key, height: 300, width: 400, crop: :fill %>
+        <% if @animal.photo.attached? %>
+          <%= cl_image_tag @animal.photo.key, height: 300, width: 400, crop: :fill %>
+        <% end %>
         <div class="animal-container">
           <div><% if @animal.chip %>
             <i class="far fa-check-square"></i>
