@@ -10,7 +10,7 @@
     <p>Vamos to Booking together !!</p>
   <% else %>
     <% @bookings.each do |booking| %>
-      <li> <%= link_to booking.date, animal_path(booking.animal) %> </li>
+      <li> <%= link_to booking.date, animal_path(booking.animal) %> <%=booking.animal.name %> </li>
     <% end %>
   <% end %>
 </ul>
