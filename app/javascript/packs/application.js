@@ -31,4 +31,11 @@ import "bootstrap";
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  const popup = document.querySelector("#popup")
+  const btnPopup = document.querySelector("#book-submit-btn")
+  if (popup && btnPopup) {
+    btnPopup.addEventListener("click", () => {
+      popup.classList.toggle('popup-open')
+    })
+  }
 });
