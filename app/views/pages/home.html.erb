@@ -1,37 +1,36 @@
 <body>
   <div class="navbar navbar-light bg-light w-100">
     <%= image_tag("logopet.png", class: "logo") %>
-  <div class="dropdown">
-    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Menu
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <%= link_to "Sign In", new_user_session_path, class:'dropdown-item' %>
-      <%= link_to "Show Room", animals_path, class:'dropdown-item' %>
-      <%= link_to "My Bookings", my_bookings_path, class:'dropdown-item' %>
-      <%= link_to "My Animals", my_owner_bookings_path, class:'dropdown-item' %>
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Menu
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <%= link_to "Sign In", new_user_session_path, class:'dropdown-item' %>
+        <%= link_to "Show Room", animals_path, class:'dropdown-item' %>
+        <%= link_to "My Bookings", my_bookings_path, class:'dropdown-item' %>
+        <%= link_to "My Animals", my_owner_bookings_path, class:'dropdown-item' %>
+      </div>
     </div>
   </div>
-</div>
-<div class="banner">
-  <div class="container">
-    <h3>Découvrez et louez nos animaux</h3>
-    <div class="formulaire">
-      <%= form_tag animals_path, method: :get, class: "form-group"  do %>
-        <%= select_tag 'species', options_for_select( @species), include_blank: "Species", id: "options" %>
-        <%= select_tag 'location', options_for_select(@location), include_blank: "Location" %>
-        <%= date_field_tag 'date', nil, class: 'special_input'%>
-        <%= submit_tag "Search", id: "submit" %>
-      <% end %>
+  <div class="banner">
+    <div class="container">
+      <h3>Découvrez et louez nos animaux</h3>
+      <div class="formulaire">
+        <%= form_tag animals_path, method: :get, class: "form-group"  do %>
+          <%= select_tag 'species', options_for_select( @species), include_blank: "Species", id: "options" %>
+          <%= select_tag 'location', options_for_select(@location), include_blank: "Location" %>
+          <%= date_field_tag 'date', nil, class: 'special_input'%>
+          <%= submit_tag "Search", id: "submit" %>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
-
 <!-- Footer -->
-<footer class="text-center text-lg-start bg-light text-muted">
+  <footer class="text-center text-lg-start bg-light text-muted">
   <!-- Section: Social media -->
-  <section
-    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <section
+      class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
     <!-- Left -->
     <div class="me-5 d-none d-lg-block">
       <span>PET SA MERE L'APP</span>
@@ -59,7 +58,6 @@
         <i class="fab fa-github"></i>
       </a>
     </div>
-</footer>
+  </footer>
 <!-- Footer -->
 </body>
-
