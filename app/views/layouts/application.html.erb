@@ -13,7 +13,9 @@
 
   <body class="<%= 'devise' if params[:controller] =~ /devise/ %>">
     <div class="navbar navbar-light bg-light w-100">
-      <%= image_tag("logopet.png", class: "logo") %>
+      <%= link_to root_path do %>
+        <%= image_tag "logopet.png", class: "logo" %>
+      <% end %>
       <div class="dropdown">
         <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Menu
@@ -26,7 +28,7 @@
         </div>
       </div>
     </div>
-      
+
     <div class="container">
       <%= yield %>
     </div>
