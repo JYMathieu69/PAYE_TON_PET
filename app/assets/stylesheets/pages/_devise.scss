@@ -7,7 +7,7 @@ body.devise {
   h2 {
     padding-left: 0px;
     margin-bottom: 40px;
-    margin-top: 40px;
+    margin-top: 20px;
     font-size:  24px; 
     opacity:  .85;
   }
@@ -20,33 +20,25 @@ body.devise {
     margin-bottom: 40px;
     width: 70%;
     height: auto;
-    position: relative;
+  }
+
+
+  .images_signup {
+    position: relative,
   }
 
   img.signup {
     position: absolute;
-    bottom: 288px;
-    right: 33px;
-    margin-top: 20px;
+  }
+
+  img.login {
+    position: absolute;
+    top: -102px;
+    right: 249px;
   }
 
   .form-control {
     width: 56%;
-  }
-  
-  .form-group {
-    display: flex;
-    position: relative;
-  }
-
-  .form-group .password {
-    margin-bottom: 30px;
-  }
-
-  .form-text {
-    position: absolute;
-    bottom: 9px;
-    right: 98px;
   }
 
   label {
@@ -56,14 +48,16 @@ body.devise {
     font-weight:  400; 
   }
   
-  a.signin-link {
+  .links {
     text-decoration: none;
     margin-top: 10px;
+    color:  #F5F3E8; 
   }
 
-  .form-actions {
-    position: absolute;
-    bottom: -264px;
-    right: 92px;
-}
+  .centered-form {
+    display: flex;
+    justify-content: center;
+
+  }
+
 }
