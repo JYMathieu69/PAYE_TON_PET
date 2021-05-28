@@ -10,6 +10,7 @@
 }
 
 .banner h3 {
+  color: #0D1821;
   font-size: 50px;
   margin-bottom: 40px;
   background-color: rgba(248, 245, 241, 0.6);
@@ -23,6 +24,22 @@
 .home .form-group {
   margin: 0px;
   display: flex;
+}
+
+.bouton {
+  margin-top: 30px;
+}
+
+.bouton a {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: #0D1821;
+}
+
+.bouton a:hover {
+  background-color: white;
+  color: #0D1821;
 }
 
 #options {

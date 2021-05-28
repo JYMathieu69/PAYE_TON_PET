@@ -7,11 +7,11 @@ class AnimalsController < ApplicationController
     name
     race
     gender
-    descript
+    description
     chip
-    worms
+    worm
     vaccined
-    accessor
+    accessories
     daily_price
     owner_id
     photo
@@ -39,7 +39,7 @@ class AnimalsController < ApplicationController
 
   def create
     @animal = Animal.new(animal_params)
-
+    @animal.owner_id = current_user.id
     if @animal.save!
       redirect_to animal_path(@animal)
     else
