@@ -13,15 +13,26 @@
 
   <body class="<%= 'devise' if params[:controller] =~ /devise/ %>">
     <div class="navbar navbar-light bg-light w-100">
-      <%= link_to root_path do %>
-        <%= image_tag "logopet.png", class: "logo" %>
+    <%= link_to root_path do %>
+    <%= image_tag "logopet.png", class: "logo" %>
+    <% end %>
+  <div class="dropdown">
+    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Menu
+    </button>
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+      <% if current_user.nil? %>
+        <%= link_to "Sign In", new_user_session_path, class:'dropdown-item' %>
+      <% else %>
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:'dropdown-item' %>
       <% end %>
-      <div class="dropdown">
-        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Menu
-        </button>
-      </div>
+      <%= link_to "Show Room", animals_path, class:'dropdown-item' %>
+      <%= link_to "My Bookings", my_bookings_path, class:'dropdown-item' %>
+      <%= link_to "My Customers Bookings", my_owner_bookings_path, class:'dropdown-item' %>
+      <%= link_to "My Animals", my_animals_path, class:'dropdown-item' %>
     </div>
+  </div>
+</div>
 
     <div class="container">
       <%= yield %>
