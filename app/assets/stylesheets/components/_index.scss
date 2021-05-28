@@ -4,3 +4,15 @@
 @import "navbar";
 @import "cards";
 @import "button";
+
+#popup {
+  display: none;
+}
+
+.popup-open {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  display: block !important;
+}
+

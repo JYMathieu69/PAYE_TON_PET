@@ -52,7 +52,9 @@
             <div class="d-flex flex-column bd-highlight text-center">
               <div class = "p-2 bd-highlight "><%= @animal.daily_price %>€/day</div>
               <div class="btn-container">
-                <%= link_to 'Book me', my_bookings_path, class: 'btn btn-lg justify-center w-100 bg-white text-black' %>
+                <div id="book-submit-btn" class='btn btn-lg justify-center w-100 bg-white text-black'>
+                  Book me
+                </div>
               </div>
             </div>
           </div>
@@ -62,4 +64,22 @@
 </div>
 <div class="retour">
   <%= link_to 'Retour', animals_index_path, class: 'btn btn-lg justify-center w-100 text-white' %>
+</div>
+
+<div id= "popup" class="popup-window">
+  <div class="title-booking">
+    <h1>Booking Setting</h1>
+  </div>
+  <div class="animal-booked">
+    <% if @animal.photo.attached? %>
+      <%= cl_image_tag @animal.photo.key, class: 'animal-picture' %>
+    <% end %>
+    <h3 class="animal-name-booked"><%= @animal.name %></h3>
+  </div>
+  <div class="formulaire-booking">
+    <%= form_tag animal_bookings_path([@animal, @booking]), method: :post, class: "form-group"  do %>
+      <%= date_field_tag 'date', nil, class: 'special_input'%>
+      <%= submit_tag "BOOK !" %>
+    <% end %>
+  </div>
 </div>
