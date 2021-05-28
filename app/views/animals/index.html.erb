@@ -10,7 +10,9 @@
     <% @animals.each_with_index do |animal, i| %>
       <div class= "animal_card <%= "shd-green" if ((i + 1) / 2) % 2  == 0 %>">
         <div class="animal_picture"><%= link_to animal_path(animal) do %>
-            <%= cl_image_tag animal.photo.key %>
+            <% if animal.photo.attached? %>
+              <%= cl_image_tag animal.photo.key %>
+            <% end -%>
           <% end -%>
         </div>
         <div class="animal_infos">
