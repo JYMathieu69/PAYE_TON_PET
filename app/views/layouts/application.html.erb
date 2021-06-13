@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <%= javascript_include_tag 'analytics', async: true %>
     <title>PAYETonPet</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,6 +11,16 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPR8729NY5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DPR8729NY5');
+</script>
+  
   </head>
 
   <body class="<%= 'devise' if params[:controller] =~ /devise/ %>">
